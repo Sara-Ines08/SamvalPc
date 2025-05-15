@@ -1,6 +1,6 @@
 /*
  * Clase Producto actualizada por Sara Inés
- * Proyecto: SAMVAL
+ * Proyecto: SAMVAL INVENTARIO
  * Evidencia: GA7-220501096-AA2-EV01
  */
 
@@ -45,7 +45,7 @@ public class Producto {
         this.idCategoria = idCategoria;
     }
 
-    // Getters y Setters personalizados por Sara Inés
+    // Getters y Setters.
     public int getId() {
         return id;
     }

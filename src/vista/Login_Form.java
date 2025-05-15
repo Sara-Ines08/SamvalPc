@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author sainp
+ * @author sainpibi
  */
 public class Login_Form extends javax.swing.JFrame {
 
@@ -144,7 +144,7 @@ public class Login_Form extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtUsuarioActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
@@ -166,15 +166,15 @@ try {
 
     if (rs.next()) {
         String nombre = rs.getString("Nombre_Usuario");
-        JOptionPane.showMessageDialog(this, "✅ Acceso permitido. ¡Bienvenido, " + nombre + "!");
+        JOptionPane.showMessageDialog(this, "Acceso permitido. ¡Bienvenido, " + nombre + "!");
     } else {
-        JOptionPane.showMessageDialog(this, "❌ Acceso denegado. Verifica los datos.");
+        JOptionPane.showMessageDialog(this, "Acceso denegado. Verifica los datos.");
     }
 
     con.close();
 
 } catch (Exception e) {
-    JOptionPane.showMessageDialog(this, "⚠️ Error: " + e.getMessage());
+    JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
 }
 
     

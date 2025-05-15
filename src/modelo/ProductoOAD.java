@@ -1,6 +1,6 @@
 /*
  * Clase ProductoOAD actualizada por Sara Inés
- * Proyecto: SAMVAL
+ * Proyecto: SAMVAL INVENTARIO
  * Evidencia: GA7-220501096-AA2-EV01
  */
 
@@ -43,7 +43,7 @@ public class ProductoOAD {
             con.close();
 
         } catch (Exception e) {
-            System.out.println("❌ Error al insertar producto: " + e.getMessage());
+            System.out.println("Error al insertar producto: " + e.getMessage());
         }
 
         return resultado;
@@ -85,7 +85,7 @@ public class ProductoOAD {
             con.close();
 
         } catch (Exception e) {
-            System.out.println("❌ Error al consultar producto: " + e.getMessage());
+            System.out.println("Error al consultar producto: " + e.getMessage());
         }
 
         return producto;
@@ -124,7 +124,7 @@ public class ProductoOAD {
             con.close();
 
         } catch (Exception e) {
-            System.out.println("❌ Error al actualizar producto: " + e.getMessage());
+            System.out.println("Error al actualizar producto: " + e.getMessage());
         }
 
         return actualizado;
@@ -150,7 +150,7 @@ public class ProductoOAD {
             con.close();
 
         } catch (Exception e) {
-            System.out.println("❌ Error al eliminar producto: " + e.getMessage());
+            System.out.println("Error al eliminar producto: " + e.getMessage());
         }
 
         return eliminado;

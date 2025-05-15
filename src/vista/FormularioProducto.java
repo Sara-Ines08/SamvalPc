@@ -7,7 +7,7 @@ package vista;
 
 /**
  *
- * @author sainp
+ * @author sainpibi
  */
 public class FormularioProducto extends javax.swing.JFrame {
 
@@ -17,7 +17,7 @@ public class FormularioProducto extends javax.swing.JFrame {
     public FormularioProducto() {
         initComponents();
         
-        // Código corregido por Sara Inés
+        
         btnConsultar.addActionListener(new java.awt.event.ActionListener() {
             @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,8 +57,8 @@ public class FormularioProducto extends javax.swing.JFrame {
                 } catch (Exception e) {
                     javax.swing.JOptionPane.showMessageDialog(null, "Error al consultar el producto: " + e.getMessage());
                 }
-            } // ← Cierra el actionPerformed
-        }); // ← Cierra el addActionListener
+            } 
+        }); 
      }
         
     /**
@@ -264,7 +264,7 @@ public class FormularioProducto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtID_ProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtID_ProveedorActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_txtID_ProveedorActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
@@ -304,15 +304,15 @@ public class FormularioProducto extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void txtDescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescripcionActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtDescripcionActionPerformed
 
     private void ComboEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboEstadoActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_ComboEstadoActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-                // Código actualizado por Sara Inés para actualizar un producto existente
+                
         try {
             modelo.Producto producto = new modelo.Producto();
 
@@ -334,13 +334,13 @@ public class FormularioProducto extends javax.swing.JFrame {
             boolean actualizado = acceso.actualizarProducto(producto);
 
             if (actualizado) {
-                javax.swing.JOptionPane.showMessageDialog(this, "✅ Producto actualizado correctamente.");
+                javax.swing.JOptionPane.showMessageDialog(this, "Producto actualizado correctamente.");
             } else {
-                javax.swing.JOptionPane.showMessageDialog(this, "❌ No se pudo actualizar el producto.");
+                javax.swing.JOptionPane.showMessageDialog(this, "No se pudo actualizar el producto.");
             }
 
         } catch (Exception e) {
-            javax.swing.JOptionPane.showMessageDialog(this, "⚠️ Error al actualizar producto: " + e.getMessage());
+            javax.swing.JOptionPane.showMessageDialog(this, "Error al actualizar producto: " + e.getMessage());
         }
 
     }//GEN-LAST:event_btnActualizarActionPerformed
@@ -363,7 +363,7 @@ public class FormularioProducto extends javax.swing.JFrame {
             boolean eliminado = productoOAD.eliminarProducto(idProducto);
 
             if (eliminado) {
-                javax.swing.JOptionPane.showMessageDialog(this, "✅ Producto eliminado correctamente.");
+                javax.swing.JOptionPane.showMessageDialog(this, "Producto eliminado correctamente.");
 
                 // Limpiar los campos después de eliminar
                 txtNombre.setText("");
@@ -380,15 +380,15 @@ public class FormularioProducto extends javax.swing.JFrame {
                 txtCategoria.setText("");
                 txtID.setText("");
             } else {
-                javax.swing.JOptionPane.showMessageDialog(this, "❌ No se pudo eliminar el producto.");
+                javax.swing.JOptionPane.showMessageDialog(this, "No se pudo eliminar el producto.");
             }
 
         }
 
     } catch (NumberFormatException e) {
-        javax.swing.JOptionPane.showMessageDialog(this, "⚠️ El ID debe ser un número válido.");
+        javax.swing.JOptionPane.showMessageDialog(this, "El ID debe ser un número válido.");
     } catch (Exception e) {
-        javax.swing.JOptionPane.showMessageDialog(this, "⚠️ Error al eliminar el producto: " + e.getMessage());
+        javax.swing.JOptionPane.showMessageDialog(this, "Error al eliminar el producto: " + e.getMessage());
     }
 
     }//GEN-LAST:event_btnEliminarActionPerformed

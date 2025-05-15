@@ -1,6 +1,6 @@
 /*
  * Clase Conexion_DB creada por Sara Inés
- * Proyecto: SAMVAL
+ * Proyecto: SAMVAL INVENTARIO
  * Evidencia: GA7-220501096-AA2-EV01
  */
 
@@ -20,9 +20,9 @@ public class Conexion_DB {
         Connection conexion = null;
         try {
             conexion = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("✅ Conexión exitosa a la base de datos samval");
+            System.out.println("Conexión exitosa a la base de datos samval");
         } catch (SQLException e) {
-            System.out.println("❌ Error al conectar: " + e.getMessage());
+            System.out.println("Error al conectar: " + e.getMessage());
         }
         return conexion;
     }

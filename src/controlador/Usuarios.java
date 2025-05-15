@@ -57,10 +57,10 @@ public class Usuarios {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                System.out.println("✅ Usuario válido: " + rs.getString("Nombre_Usuario"));
+                System.out.println("Usuario válido: " + rs.getString("Nombre_Usuario"));
                 accesoConcedido = true;
             } else {
-                JOptionPane.showMessageDialog(null, "❌ Credenciales incorrectas");
+                JOptionPane.showMessageDialog(null, "Credenciales incorrectas");
             }
 
             con.close();
